@@ -1,13 +1,196 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a,
+ul {
+  text-decoration: none;
+  list-style: none;
+  color: #000;
 }
+
+body {
+  background-color: #fafcf9;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 25px 10%;
+  box-shadow: 3px 3px 5px #06685b;
+}
+.nav-list {
+  display: flex;
+}
+.nav-list-item {
+  margin-left: 15px;
+  font-size: 1.3rem;
+}
+.nav span {
+  color: #06685b;
+}
+
+.home {
+  width: 90%;
+  margin: 100px auto;
+}
+.home .card-heading {
+  text-align: center;
+  font-size: 2rem;
+}
+.home .card {
+  margin-top: 50px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 2px 2px 3px #222;
+  padding-bottom: 15px;
+}
+.home .card-img {
+  width: 100%;
+  height: 45vh;
+  border-radius: 5px;
+}
+.home .card-details h1 {
+  margin: 15px;
+  font-size: 2rem;
+}
+.home .card-details h3,
+.home .card-details p {
+  margin: 15px;
+}
+.home .card-link {
+  background-color: #06685b;
+  color: #fff;
+  padding: 5px;
+  margin: 15px;
+}
+.home .searchbox {
+  margin-bottom: 100px;
+  text-align: center;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 3px 3px 5px #111;
+  border-radius: 5px;
+  color: #06685b;
+}
+.home .searchbox input {
+  width: 95%;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #fafcf9;
+}
+
+.detail .link {
+  background-color: #06685b;
+  color: #fff;
+  padding: 10px 0px;
+  display: block;
+  width: 28%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  color: #8ff89d;
+}
+.detail-drink {
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 20px;
+}
+.detail-img {
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  height: 35%;
+  margin-top: 40px;
+  box-shadow: 2px 2px 3px #222;
+  border-radius: 5px;
+}
+.detail-category {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.detail-category-val {
+  margin-left: 15px;
+  align-self: center;
+}
+.detail-category-key {
+  background-color: #8ff89d;
+  color: #000;
+  padding: 5px;
+}
+
+.about {
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+}
+.about .heading {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+.about .desc {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+@media (min-width: 818px) {
+  .home {
+    width: 80%;
+  }
+  .home .searchbox {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .home .cards .card {
+    width: 47%;
+  }
+
+  .about {
+    width: 60%;
+  }
+}
+@media (min-width: 975px) {
+  .detail .drink {
+    display: flex;
+    height: 45vh;
+    align-items: flex-start;
+  }
+  .detail .drink .detail-img {
+    width: 36%;
+    height: 100%;
+    margin-right: 20px;
+    margin-top: 0px;
+    display: block;
+  }
+  .detail .drink .all-categories {
+    height: 100%;
+  }
+}
+@media (min-width: 1254px) {
+  .home {
+    width: 75%;
+  }
+  .home .searchbox {
+    width: 60%;
+  }
+  .home .cards .card {
+    width: 32%;
+  }
+
+  .about {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

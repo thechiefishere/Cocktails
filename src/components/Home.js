@@ -1,5 +1,4 @@
 import React from "react";
-import SearchBox from "./SearchBox";
 import Loading from "./Loading";
 import { useGlobalContext } from "../context";
 import { Outlet } from "react-router-dom";
@@ -8,7 +7,7 @@ const Home = () => {
   const { loading } = useGlobalContext();
 
   return (
-    <section>
+    <section className="home">
       <Outlet />
       {loading && <Loading />}
     </section>

@@ -14,10 +14,12 @@ const Cards = () => {
         <div>
           <SearchBox />
 
-          <h2>Cocktails</h2>
-          {drinks.map((drink) => {
-            return <Card key={drink.idDrink} drink={drink} />;
-          })}
+          <h2 className="card-heading">Cocktails</h2>
+          <div className="cards">
+            {drinks.map((drink) => {
+              return <Card key={drink.idDrink} drink={drink} />;
+            })}
+          </div>
         </div>
       )}
     </>
