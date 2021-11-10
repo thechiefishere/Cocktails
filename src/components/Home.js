@@ -1,15 +1,12 @@
 import React from "react";
-import Loading from "./Loading";
-import { useGlobalContext } from "../context";
+import SearchBox from "./SearchBox";
 import { Outlet } from "react-router-dom";
 
 const Home = () => {
-  const { loading } = useGlobalContext();
-
   return (
     <section className="home">
+      <SearchBox />
       <Outlet />
-      {loading && <Loading />}
     </section>
   );
 };

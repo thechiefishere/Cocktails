@@ -37,10 +37,13 @@ body {
 
 .home {
   width: 90%;
-  margin: 100px auto;
+  margin: 0 auto;
   .card-heading {
     text-align: center;
     font-size: 2rem;
+  }
+  .no-cocktail {
+    text-align: center;
   }
   .card {
     margin-top: 50px;
@@ -70,24 +73,27 @@ body {
       margin: 15px;
     }
   }
-  .searchbox {
-    margin-bottom: 100px;
-    text-align: center;
-    background-color: #fff;
-    padding: 40px;
-    box-shadow: 3px 3px 5px #111;
-    border-radius: 5px;
-    color: $primary-color;
-    input {
-      width: 95%;
-      height: 40px;
-      margin-top: 10px;
-      background-color: $primary-bg;
-    }
+}
+.searchbox {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 3px 3px 5px #111;
+  border-radius: 5px;
+  color: $primary-color;
+  input {
+    width: 95%;
+    height: 40px;
+    margin-top: 10px;
+    background-color: $primary-bg;
   }
 }
 
 .detail {
+  width: 90%;
+  margin: 100px auto;
   .link {
     background-color: $primary-color;
     color: #fff;
@@ -140,6 +146,27 @@ body {
   .desc {
     font-size: 1.1em;
     line-height: 1.5em;
+  }
+}
+
+.error {
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .link {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 0px;
+    display: block;
+    width: 28%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    color: $secondary-color;
   }
 }
 

@@ -13,7 +13,7 @@ const Card = ({ drink }) => {
         <h1>{drink.strDrink}</h1>
         <h3>{drink.strGlass}</h3>
         <p>{drink.strAlcoholic}</p>
-        <Link className="card-link" to={`/home/${drink.idDrink}`}>
+        <Link className="card-link" to={`/cocktail/${drink.idDrink}`}>
           DETAILS
         </Link>
       </div>

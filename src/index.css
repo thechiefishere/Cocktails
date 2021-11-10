@@ -36,11 +36,14 @@ body {
 
 .home {
   width: 90%;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 .home .card-heading {
   text-align: center;
   font-size: 2rem;
+}
+.home .no-cocktail {
+  text-align: center;
 }
 .home .card {
   margin-top: 50px;
@@ -68,7 +71,9 @@ body {
   padding: 5px;
   margin: 15px;
 }
-.home .searchbox {
+
+.searchbox {
+  margin-top: 100px;
   margin-bottom: 100px;
   text-align: center;
   background-color: #fff;
@@ -77,13 +82,17 @@ body {
   border-radius: 5px;
   color: #06685b;
 }
-.home .searchbox input {
+.searchbox input {
   width: 95%;
   height: 40px;
   margin-top: 10px;
   background-color: #fafcf9;
 }
 
+.detail {
+  width: 90%;
+  margin: 100px auto;
+}
 .detail .link {
   background-color: #06685b;
   color: #fff;
@@ -136,6 +145,27 @@ body {
 .about .desc {
   font-size: 1.1em;
   line-height: 1.5em;
+}
+
+.error {
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+}
+.error .heading {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+.error .link {
+  background-color: #06685b;
+  color: #fff;
+  padding: 10px 0px;
+  display: block;
+  width: 28%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  color: #8ff89d;
 }
 
 @media (min-width: 818px) {

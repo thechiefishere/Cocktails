@@ -7,21 +7,26 @@ const AppContext = React.createContext();
 export const AppProvider = ({ children }) => {
   const [drinks, setDrinks] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [inHome, setInHome] = useState(true);
+  const [searchText, setSearchText] = useState("a");
 
-  const fetchData = async () => {
+  const fetchData = React.useCallback(async () => {
     setLoading(true);
-    const data = await fetch(url);
-    const cocktails = await data.json();
-    setDrinks(cocktails.drinks);
-    setLoading(false);
-  };
+    try {
+      const response = await fetch(`${url}${searchText}`);
+      const data = await response.json();
+      setDrinks(data.drinks);
+      setLoading(false);
+    } catch (err) {
+      console.log("The error is ", err);
+    }
+  }, [searchText]);
+
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [searchText, fetchData]);
 
   return (
-    <AppContext.Provider value={{ drinks, loading, inHome, setInHome }}>
+    <AppContext.Provider value={{ drinks, loading, searchText, setSearchText }}>
       {children}
     </AppContext.Provider>
   );

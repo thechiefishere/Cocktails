@@ -1,28 +1,28 @@
 import React from "react";
 import Card from "./Card";
-import SearchBox from "./SearchBox";
+import Loading from "./Loading";
 import { useGlobalContext } from "../context";
 
 const Cards = () => {
   const { drinks, loading } = useGlobalContext();
 
-  return (
-    <>
-      {loading ? (
-        <SearchBox />
-      ) : (
-        <div>
-          <SearchBox />
+  if (loading) {
+    return <Loading />;
+  }
 
-          <h2 className="card-heading">Cocktails</h2>
-          <div className="cards">
-            {drinks.map((drink) => {
-              return <Card key={drink.idDrink} drink={drink} />;
-            })}
-          </div>
-        </div>
-      )}
-    </>
+  if (!drinks) {
+    return <h2 className="no-cocktail">No Cocktail To Display</h2>;
+  }
+
+  return (
+    <section>
+      <h2 className="card-heading">Cocktails</h2>
+      <div className="cards">
+        {drinks.map((drink) => {
+          return <Card key={drink.idDrink} drink={drink} />;
+        })}
+      </div>
+    </section>
   );
 };
 
